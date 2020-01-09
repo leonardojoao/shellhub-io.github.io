@@ -270,6 +270,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../architecture/" title="Architecture" class="md-nav__link">
+      Architecture
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -367,27 +379,27 @@ multiple small, isolated services make up the server.
 In order to make it easy to test ShellHub as a whole, we have created
 a Docker Compose environment that brings all of these components up
 and connects them together on a single machine.</p>
-<h2 id="installing">Installing</h2>
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
 <p>Before continuing, make sure you have installed Docker Engine and Docker Compose.</p>
 <p>In a working directory, download the docker-compose file:</p>
-<div class="highlight"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/docker-compose.yml
+<div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/docker-compose.yml
 </pre></div>
 
 <p>Brings up the ShellHub server:</p>
-<div class="highlight"><pre><span></span>$ docker-compose up -d
+<div class="codehilite"><pre><span></span>$ docker-compose up -d
 </pre></div>
 
-<h2 id="creating-the-initial-user">Creating the initial user</h2>
+<h2 id="creating-the-initial-user">Creating the initial user<a class="headerlink" href="#creating-the-initial-user" title="Permanent link">&para;</a></h2>
 <p>After ShellHub server have been up and running you need to create the initial user.</p>
 <p>Go to the working directory and download the <code>add-user</code> utility from our repository:</p>
-<div class="highlight"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/bin/add-user
+<div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/bin/add-user
 </pre></div>
 
 <p>Then run the <code>add-user</code> utility:</p>
-<div class="highlight"><pre><span></span>$ sh ./add-user &lt;username&gt; &lt;password&gt;
+<div class="codehilite"><pre><span></span>$ sh ./add-user &lt;username&gt; &lt;password&gt;
 </pre></div>
 
-<h2 id="adding-your-first-device">Adding your first device</h2>
+<h2 id="adding-your-first-device">Adding your first device<a class="headerlink" href="#adding-your-first-device" title="Permanent link">&para;</a></h2>
 <p>ShellHub can run in most of any Linux-based operating system with <strong>Docker Engine
 installed and running</strong>, no matter what architecture is your device.</p>
 <p>The following architectures are supported:</p>
@@ -398,13 +410,13 @@ installed and running</strong>, no matter what architecture is your device.</p>
 </ul>
 <p>Open the terminal of your device or access your device with ssh on the local network,
 then run the following commands to install the ShellHub agent:</p>
-<div class="highlight"><pre><span></span>$ curl &quot;http://localhost/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
+<div class="codehilite"><pre><span></span>$ curl &quot;http://localhost/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
 </pre></div>
 
 <div class="admonition info">
 <p class="admonition-title">Note that you have to replace <code>&lt;TENANT-ID&gt;</code> with your Tenant ID</p>
 </div>
-<h2 id="connecting-to-your-device">Connecting to your device</h2>
+<h2 id="connecting-to-your-device">Connecting to your device<a class="headerlink" href="#connecting-to-your-device" title="Permanent link">&para;</a></h2>
 <p>ShellHub supports different connection methods:</p>
 <ul>
 <li>Web-based SSH client inside ShellHub UI (Chrome, Firefox)</li>
@@ -413,26 +425,26 @@ then run the following commands to install the ShellHub agent:</p>
 </ul>
 <p>Open the ShellHub UI at <a href="">http://localhost</a> and sign in using the username and password
 that was generated in a previous step.</p>
-<p>Once you had sign in, go to <a href="http://localhost/devices" target="_blank">Device Fleet</a> page
+<p>Once you had sign in, go to <a href="http://localhost/devices">Device Fleet</a>{target=_blank} page
 and follow instructions of one method:</p>
-<h3 id="web-based-ssh-client">Web-based SSH client</h3>
+<h3 id="web-based-ssh-client">Web-based SSH client<a class="headerlink" href="#web-based-ssh-client" title="Permanent link">&para;</a></h3>
 <p>In the Device Fleet page choose the device you want to connect to and click on Terminal icon
 located at <em>Actions</em> column of the table.</p>
 <p>A dialog will show prompting you for the username and password of any existing user in
 device's operating system. After providing credentials click on Connect button.</p>
-<h3 id="command-line-ssh-client">Command line SSH client</h3>
+<h3 id="command-line-ssh-client">Command line SSH client<a class="headerlink" href="#command-line-ssh-client" title="Permanent link">&para;</a></h3>
 <p>To connect to your device using a command line SSH client you need to know its SSHID address.</p>
 <p>In the Device Fleet page choose the device you want to connect to and copy the device's SSHID
 address clicking on Copy icon located at SSHID address column of the table.</p>
 <p>Run the following command in your terminal:</p>
-<div class="highlight"><pre><span></span>$ ssh &lt;USER&gt;@&lt;SSHID&gt;
+<div class="codehilite"><pre><span></span>$ ssh &lt;USER&gt;@&lt;SSHID&gt;
 </pre></div>
 
 <div class="admonition note">
 <p>Make sure to replace <code>&lt;USER&gt;</code> with existing user in device's operating system and
 <code>&lt;SSHID&gt;</code> with the SSHID address copied before.</p>
 </div>
-<h3 id="putty-gui-ssh-client">PuTTY GUI SSH client</h3>
+<h3 id="putty-gui-ssh-client">PuTTY GUI SSH client<a class="headerlink" href="#putty-gui-ssh-client" title="Permanent link">&para;</a></h3>
 <p>TODO</p>
                 
                   
@@ -469,6 +481,20 @@ address clicking on Copy icon located at SSHID address column of the table.</p>
             </div>
           </a>
         
+        
+          <a href="../architecture/" title="Architecture" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Architecture
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
