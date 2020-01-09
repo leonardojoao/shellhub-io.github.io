@@ -47,40 +47,11 @@ $ docker run -d --restart=unless-stopped --privileged --net=host --pid=host -v /
 
 ## Connecting to your device
 
-ShellHub supports different connection methods:
+To connect to your device you need to know its `SSHID` address.
 
-* Web-based SSH client inside ShellHub UI (Chrome, Firefox)
-* Traditional command line SSH client (Linux, Mac OS X)
-* Any GUI SSH client like PuTTY (Windows)
-
-Open the ShellHub UI at [http://localhost]() and sign in using the username and password
+Open the ShellHub UI at http://localhost and sign in using the username and password
 that was generated in a previous step.
 
-Once you had sign in, go to [Device Fleet](http://localhost/devices){target=_blank} page
-and follow instructions of one method:
+[Example](https://example.com){target=_blank}
 
-### Web-based SSH client
-
-In the Device Fleet page choose the device you want to connect to and click on Terminal icon
-located at *Actions* column of the table.
-
-A dialog will show prompting you for the username and password of any existing user in
-device's operating system. After providing credentials click on Connect button.
-
-### Command line SSH client
-
-To connect to your device using a command line SSH client you need to know its `SSHID` address.
-
-In the Device Fleet page choose the device you want to connect to and copy the device's `SSHID`
-address clicking on Copy icon located at SSHID address column of the table.
-
-```
-$ ssh <USER>@<SSHID>
-```
-
-Make sure to replace `<USER>` with existing user in device's operating system and
-`<SSHID>` with the SSHID address copied before.
-
-### PuTTY GUI SSH client
-
-TODO
+Once you had sign in go to [Device Fleet](http://localhost/devices){target=_blank} page and copy the the device's `SSHID`.
