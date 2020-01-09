@@ -388,12 +388,22 @@ and connects them together on a single machine.</p>
 </pre></div>
 
 <h2 id="adding-your-first-device">Adding your first device</h2>
-<div class="highlight"><pre><span></span>$ docker run -d --restart=unless-stopped --privileged --net=host --pid=host -v /:/host -e SERVER_ADDRESS=http://localhost -e PRIVATE_KEY=/host/etc/shellhub.key -e TENANT_D=&lt;TENANT-ID&gt; shellhubio/agent:latest
+<p>ShellHub can run in most of any Linux-based operating system with <strong>Docker Engine
+installed and running</strong>, no matter what architecture is your device.</p>
+<p>The following architectures are supported:</p>
+<ul>
+<li>amd64</li>
+<li>arm32v6</li>
+<li>arm64v8</li>
+</ul>
+<p>Open the terminal of your device or access your device with ssh on the local network,
+then run the following commands to install the ShellHub agent:</p>
+<div class="highlight"><pre><span></span>$ curl &quot;http://localhost/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
 </pre></div>
 
-<blockquote>
-<p>Note that you have to replace <code>&lt;TENANT-ID&gt;</code> with your Tenant ID.</p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Note that you have to replace <code>&lt;TENANT-ID&gt;</code> with your Tenant ID</p>
+</div>
 <h2 id="connecting-to-your-device">Connecting to your device</h2>
 <p>ShellHub supports different connection methods:</p>
 <ul>
@@ -411,14 +421,16 @@ located at <em>Actions</em> column of the table.</p>
 <p>A dialog will show prompting you for the username and password of any existing user in
 device's operating system. After providing credentials click on Connect button.</p>
 <h3 id="command-line-ssh-client">Command line SSH client</h3>
-<p>To connect to your device using a command line SSH client you need to know its <code>SSHID</code> address.</p>
-<p>In the Device Fleet page choose the device you want to connect to and copy the device's <code>SSHID</code>
+<p>To connect to your device using a command line SSH client you need to know its SSHID address.</p>
+<p>In the Device Fleet page choose the device you want to connect to and copy the device's SSHID
 address clicking on Copy icon located at SSHID address column of the table.</p>
 <div class="highlight"><pre><span></span>$ ssh &lt;USER&gt;@&lt;SSHID&gt;
 </pre></div>
 
+<div class="admonition note">
 <p>Make sure to replace <code>&lt;USER&gt;</code> with existing user in device's operating system and
 <code>&lt;SSHID&gt;</code> with the SSHID address copied before.</p>
+</div>
 <h3 id="putty-gui-ssh-client">PuTTY GUI SSH client</h3>
 <p>TODO</p>
                 
