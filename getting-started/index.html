@@ -145,6 +145,41 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        What is ShellHub?
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../welcome/" class="md-tabs__link md-tabs__link--active">
+          Introduction
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -179,6 +214,39 @@
       
       
       
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome/" title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
 
   
 
@@ -269,16 +337,21 @@
     
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
     <a href="../architecture/" title="Architecture" class="md-nav__link">
       Architecture
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -374,13 +447,17 @@
                 
                   <h1>Getting started</h1>
                 
-                <p>ShellHub is built using the microservices design pattern, meaning that
+                <p>This tutorial will guide you through the steps needed to install and
+run ShellHub on your local machine.</p>
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
+<p>ShellHub is built using the microservices design pattern, meaning that
 multiple small, isolated services make up the server.
 In order to make it easy to test ShellHub as a whole, we have created
 a Docker Compose environment that brings all of these components up
 and connects them together on a single machine.</p>
-<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
-<p>Before continuing, make sure you have installed Docker Engine and Docker Compose.</p>
+<div class="admonition warning">
+<p class="admonition-title">Before continuing, make sure you have installed Docker Engine and Docker Compose</p>
+</div>
 <p>In a working directory, download the docker-compose file:</p>
 <div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/docker-compose.yml
 </pre></div>
@@ -479,7 +556,7 @@ address clicking on Copy icon located at SSHID address column of the table.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="What is ShellHub?" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../welcome/" title="Welcome" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -488,7 +565,7 @@ address clicking on Copy icon located at SSHID address column of the table.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                What is ShellHub?
+                Welcome
               </span>
             </div>
           </a>
