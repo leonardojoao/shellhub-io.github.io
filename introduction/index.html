@@ -36,7 +36,7 @@
     
     
       
-        <title>Architecture - ShellHub</title>
+        <title>Introduction - ShellHub</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#basic-concepts" tabindex="1" class="md-skip">
+      <a href="#introduction" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Architecture
+                Introduction
               
             </span>
           
@@ -145,41 +145,6 @@
         
       
       
-        
-
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href=".." class="md-tabs__link">
-        What is ShellHub?
-      </a>
-    
-  </li>
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../welcome/" class="md-tabs__link md-tabs__link--active">
-          Introduction
-        </a>
-      
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -218,99 +183,29 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-    <label class="md-nav__link" for="nav-2">
+      
+    
+    
+    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
       Introduction
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Introduction
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../welcome/" title="Welcome" class="md-nav__link">
-      Welcome
     </a>
+    
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
     <a href="../getting-started/" title="Getting started" class="md-nav__link">
       Getting started
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Architecture
-      </label>
-    
-    <a href="./" title="Architecture" class="md-nav__link md-nav__link--active">
-      Architecture
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-concepts" class="md-nav__link">
-    Basic concepts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    Services
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -328,29 +223,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-concepts" class="md-nav__link">
-    Basic concepts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    Services
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
   
 </nav>
                   </div>
@@ -363,14 +237,22 @@
               
                 
                 
-                  <h1>Architecture</h1>
-                
-                <p>This guide is for those looking for a deeper understanding of ShellHub.</p>
-<p>If you are looking for instructions on how to set up ShellHub
-for your device fleet, check out the <a href="../getting-started/">Getting Started</a>.</p>
-<h2 id="basic-concepts">Basic concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">&para;</a></h2>
+                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>This introduction section is intended to give a high-level overview of the ShellHub.</p>
+<p>The ShellHub is composed of two major parts, the <strong>SSH Gateway</strong> and the <strong>Device Agent</strong>.
+These parts work together to provide a secure SSH connection across the network
+to Linux-based devices.</p>
 <p>There are few basic concepts that are important to understand the ShellHub.
 Those basic concepts are detailed below:</p>
+<p><strong>SSH Gateway</strong></p>
+<p>The ShellHub SSH gateway is a modern SSH server built using the microservices
+design pattern, meaning that multiple small, isolated services make up the server.
+It must be installed on any cloud provider like Azure, Google, AWS or DigitalOcean.</p>
+<p><strong>Device Agent</strong></p>
+<p>The ShellHub device agent which must be installed on the device.</p>
+<p>This guide is for those looking for a deeper understanding of ShellHub.</p>
+<p>If you are looking for instructions on how to set up ShellHub
+for your device fleet, check out the <a href="../getting-started/">Getting Started</a>.</p>
 <p><strong>SSHID</strong></p>
 <p>SSHID is a unique address to identify a device in ShellHub SSH gateway.</p>
 <p>SSHID consist of following format:</p>
@@ -385,9 +267,6 @@ Those basic concepts are detailed below:</p>
 <li><code>&lt;GATEWAY_ADDRESS&gt;</code>: Is the gateway address identifier</li>
 </ol>
 <p>Example of SSHID: <code>lab.rasp-1@localhost</code></p>
-<h2 id="services">Services<a class="headerlink" href="#services" title="Permanent link">&para;</a></h2>
-<p>ShellHub is built using the microservices design pattern, meaning that
-multiple small, isolated services make up the server.</p>
                 
                   
                 
@@ -409,7 +288,7 @@ multiple small, isolated services make up the server.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../getting-started/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="What is ShellHub?" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -418,11 +297,25 @@ multiple small, isolated services make up the server.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting started
+                What is ShellHub?
               </span>
             </div>
           </a>
         
+        
+          <a href="../getting-started/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Getting started
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
