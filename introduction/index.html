@@ -190,9 +190,65 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction
+      </label>
+    
     <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
       Introduction
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-concepts" class="md-nav__link">
+    Basic concepts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-gateway" class="md-nav__link">
+    SSH Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-agent" class="md-nav__link">
+    Device Agent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sshid" class="md-nav__link">
+    SSHID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -226,6 +282,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-concepts" class="md-nav__link">
+    Basic concepts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-gateway" class="md-nav__link">
+    SSH Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-agent" class="md-nav__link">
+    Device Agent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sshid" class="md-nav__link">
+    SSHID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -242,18 +341,19 @@
 <p>The ShellHub is composed of two major parts, the <strong>SSH Gateway</strong> and the <strong>Device Agent</strong>.
 These parts work together to provide a secure SSH connection across the network
 to Linux-based devices.</p>
+<h2 id="basic-concepts">Basic concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">&para;</a></h2>
 <p>There are few basic concepts that are important to understand the ShellHub.
 Those basic concepts are detailed below:</p>
-<p><strong>SSH Gateway</strong></p>
+<h3 id="ssh-gateway">SSH Gateway<a class="headerlink" href="#ssh-gateway" title="Permanent link">&para;</a></h3>
 <p>The ShellHub SSH gateway is a modern SSH server built using the microservices
 design pattern, meaning that multiple small, isolated services make up the server.
 It must be installed on any cloud provider like Azure, Google, AWS or DigitalOcean.</p>
-<p><strong>Device Agent</strong></p>
+<h3 id="device-agent">Device Agent<a class="headerlink" href="#device-agent" title="Permanent link">&para;</a></h3>
 <p>The ShellHub device agent which must be installed on the device.</p>
 <p>This guide is for those looking for a deeper understanding of ShellHub.</p>
 <p>If you are looking for instructions on how to set up ShellHub
 for your device fleet, check out the <a href="../getting-started/">Getting Started</a>.</p>
-<p><strong>SSHID</strong></p>
+<h3 id="sshid">SSHID<a class="headerlink" href="#sshid" title="Permanent link">&para;</a></h3>
 <p>SSHID is a unique address to identify a device in ShellHub SSH gateway.</p>
 <p>SSHID consist of following format:</p>
 <div class="codehilite"><pre><span></span>&lt;NAMESPACE&gt;.&lt;DEVICE_NAME&gt;@&lt;GATEWAY_ADDRESS&gt;
