@@ -375,7 +375,9 @@
                   <h1>Getting started</h1>
                 
                 <p>This tutorial will guide you through the steps needed to install and
-run ShellHub on your local machine.</p>
+run ShellHub on your local computer.</p>
+<p>If you are looking for instructions on how to set up ShellHub
+for your device fleet on your cloud infrastructure the same steps apply.</p>
 <h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
 <p>ShellHub is built using the microservices design pattern, meaning that
 multiple small, isolated services make up the server.
@@ -414,11 +416,13 @@ installed and running</strong>, no matter what architecture is your device.</p>
 </ul>
 <p>Open the terminal of your device or access your device with ssh on the local network,
 then run the following commands to install the ShellHub agent:</p>
-<div class="codehilite"><pre><span></span>$ curl &quot;http://localhost/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
+<div class="codehilite"><pre><span></span>$ curl &quot;http://&lt;SERVER_IP&gt;/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
 </pre></div>
 
 <div class="admonition info">
-<p class="admonition-title">Note that you have to replace <code>&lt;TENANT-ID&gt;</code> with your Tenant ID</p>
+<p>Note that you have to replace <code>&lt;TENANT_ID&gt;</code> with your Tenant ID and
+<code>&lt;SERVER_IP&gt;</code> with the public IP address of the host that is running
+ShellHub.</p>
 </div>
 <h2 id="connecting-to-your-device">Connecting to your device<a class="headerlink" href="#connecting-to-your-device" title="Permanent link">&para;</a></h2>
 <p>ShellHub supports different connection methods:</p>
@@ -429,7 +433,7 @@ then run the following commands to install the ShellHub agent:</p>
 </ul>
 <p>Open the ShellHub UI at <a href="">http://localhost</a> and sign in using the username and password
 that was generated in a previous step.</p>
-<p>Once you had sign in, go to <a href="http://localhost/devices" target="_blank">Device Fleet</a> page
+<p>Once you had sign in, go to Device Fleet page (<a href="" target="_blank">http://localhost/devices</a>)
 and follow instructions of one method:</p>
 <h3 id="web-based-ssh-client">Web-based SSH client<a class="headerlink" href="#web-based-ssh-client" title="Permanent link">&para;</a></h3>
 <p>In the Device Fleet page choose the device you want to connect to and click on Terminal icon
