@@ -405,17 +405,14 @@ and connects them together on a single machine.</p>
 <div class="codehilite"><pre><span></span>$ sh ./add-user &lt;username&gt; &lt;password&gt;
 </pre></div>
 
+<div class="admonition info">
+<p class="admonition-title">You need to copy the Tenant ID from the command output</p>
+</div>
 <h2 id="adding-your-first-device">Adding your first device<a class="headerlink" href="#adding-your-first-device" title="Permanent link">&para;</a></h2>
-<p>ShellHub can run in most of any Linux-based operating system with <strong>Docker Engine
-installed and running</strong>, no matter what architecture is your device.</p>
-<p>The following architectures are supported:</p>
-<ul>
-<li>amd64</li>
-<li>arm32v6</li>
-<li>arm64v8</li>
-</ul>
-<p>Open the terminal of your device or access your device with ssh on the local network,
-then run the following commands to install the ShellHub agent:</p>
+<p>To add your first device to ShellHub you need to install ShellHub Agent onto it.</p>
+<p>The ShellHub Agent runs inside a Docker container. Make sure you have Docker
+installed and properly set up.</p>
+<p>Open the terminal of your device then run the following commands to install the ShellHub agent:</p>
 <div class="codehilite"><pre><span></span>$ curl &quot;http://&lt;SERVER_IP&gt;/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
 </pre></div>
 
