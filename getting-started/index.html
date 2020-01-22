@@ -221,6 +221,26 @@
     Installing
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-keys" class="md-nav__link">
+    Generate keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting" class="md-nav__link">
+    Starting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -304,6 +324,26 @@
   <a href="#installing" class="md-nav__link">
     Installing
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-keys" class="md-nav__link">
+    Generate keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting" class="md-nav__link">
+    Starting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -391,6 +431,17 @@ and connects them together on a single machine.</p>
 <div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/docker-compose.yml
 </pre></div>
 
+<h3 id="generate-keys">Generate keys<a class="headerlink" href="#generate-keys" title="Permanent link">&para;</a></h3>
+<p>You need to generate key pairs (private and public) for your ShellHub server instance.</p>
+<p>Download the <code>keygen</code> script to help you do that:</p>
+<div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/bin/keygen
+</pre></div>
+
+<p>Generate key pairs running:</p>
+<div class="codehilite"><pre><span></span>$ sh ./keygen
+</pre></div>
+
+<h3 id="starting">Starting<a class="headerlink" href="#starting" title="Permanent link">&para;</a></h3>
 <p>Brings up the ShellHub server:</p>
 <div class="codehilite"><pre><span></span>$ docker-compose up -d
 </pre></div>
