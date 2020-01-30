@@ -10,6 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="ShellHub enables teams to easily access any Linux device behind firewall and NAT">
+      
+      
+        <link rel="canonical" href="https://github.com/shellhub-io/getting-started/">
       
       
       
@@ -56,6 +60,8 @@
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
+      <link rel="manifest" href="../manifest.webmanifest">
+    
     
     
       
@@ -68,6 +74,8 @@
     <svg class="md-svg">
       <defs>
         
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -84,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="ShellHub" class="md-header-nav__button md-logo">
+        <a href="https://github.com/shellhub-io" title="ShellHub" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -136,6 +144,28 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/shellhub-io/shellhub.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    shellhub-io/shellhub.git
+  </div>
+</a>
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -154,13 +184,33 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="ShellHub" class="md-nav__button md-logo">
+    <a href="https://github.com/shellhub-io" title="ShellHub" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
     ShellHub
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/shellhub-io/shellhub.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    shellhub-io/shellhub.git
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -411,47 +461,49 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/shellhub-io/shellhub.git/edit/master/docs/getting-started.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
                 
                   <h1>Getting started</h1>
                 
                 <p>This tutorial will guide you through the steps needed to install and
-run ShellHub on your local computer.</p>
+run ShellHub.</p>
 <p>If you are looking for instructions on how to set up ShellHub
 for your device fleet on your cloud infrastructure the same steps apply.</p>
 <h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
-<p>ShellHub is built using the microservices design pattern, meaning that
-multiple small, isolated services make up the server.
-In order to make it easy to test ShellHub as a whole, we have created
+<p>ShellHub is designed using the microservices design pattern, so that multiple small 
+and isolated services collaborate to provide the server.
+In order to make it easier to test ShellHub and its features, we have created
 a Docker Compose environment that brings all of these components up
 and connects them together on a single machine.</p>
 <div class="admonition warning">
 <p class="admonition-title">Before continuing, make sure you have installed Docker Engine and Docker Compose</p>
 </div>
-<p>In a working directory, download the docker-compose file:</p>
+<p>First off, download the docker-compose file:</p>
 <div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/docker-compose.yml
 </pre></div>
 
 <h3 id="generate-keys">Generate keys<a class="headerlink" href="#generate-keys" title="Permanent link">&para;</a></h3>
-<p>You need to generate key pairs (private and public) for your ShellHub server instance.</p>
-<p>Download the <code>keygen</code> script to help you do that:</p>
+<p>It is required to generate a key pair (private and public) for your ShellHub server instance.</p>
+<p>For such, you may download the <code>keygen</code> script:</p>
 <div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/bin/keygen
 </pre></div>
 
-<p>Generate key pairs running:</p>
+<p>And generate key pairs running:</p>
 <div class="codehilite"><pre><span></span>$ sh ./keygen
 </pre></div>
 
 <h3 id="starting">Starting<a class="headerlink" href="#starting" title="Permanent link">&para;</a></h3>
-<p>Brings up the ShellHub server:</p>
+<p>For bringing up the ShellHub server, run:</p>
 <div class="codehilite"><pre><span></span>$ docker-compose up -d
 </pre></div>
 
 <div class="admonition warning">
-<p class="admonition-title">Make sure port 80 and 22 are free at the host</p>
+<p class="admonition-title">Make sure ports 80 and 22 are available at the host end</p>
 </div>
 <h2 id="creating-the-initial-user">Creating the initial user<a class="headerlink" href="#creating-the-initial-user" title="Permanent link">&para;</a></h2>
-<p>After ShellHub server have been up and running you need to create the initial user.</p>
-<p>Go to the working directory and download the <code>add-user</code> utility from our repository:</p>
+<p>As the ShellHub server is up and running, you need to create the first user.</p>
+<p>On the current working directory, download the <code>add-user</code> utility from <a href="https://github.com/shellhub-io">our repository</a>:</p>
 <div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/bin/add-user
 </pre></div>
 
@@ -460,62 +512,62 @@ and connects them together on a single machine.</p>
 </pre></div>
 
 <div class="admonition info">
-<p class="admonition-title">You need to copy the Tenant ID from the command output</p>
+<p class="admonition-title">You should keep the <em>Tenant ID</em> from the command output</p>
 </div>
 <h2 id="adding-your-first-device">Adding your first device<a class="headerlink" href="#adding-your-first-device" title="Permanent link">&para;</a></h2>
-<p>To add your first device to ShellHub you need to install ShellHub Agent onto it.</p>
+<p>To add a device to ShellHub you need to install ShellHub Agent onto it.</p>
 <p>The ShellHub Agent runs inside a Docker container. Make sure you have Docker
 installed and properly set up.</p>
-<p>Open the terminal of your device then run the following commands to install the ShellHub agent:</p>
+<p>Open a terminal on your device and then run the following commands to install the ShellHub agent:</p>
 <div class="codehilite"><pre><span></span>$ curl &quot;http://&lt;SERVER_IP&gt;/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
 </pre></div>
 
 <div class="admonition info">
-<p>Note that you have to replace <code>&lt;TENANT_ID&gt;</code> with your Tenant ID and
-<code>&lt;SERVER_IP&gt;</code> with the public IP address of the host that is running
+<p>Replace <code>&lt;TENANT_ID&gt;</code> with your <em>Tenant ID</em> and
+<code>&lt;SERVER_IP&gt;</code> with the public IP address of the host running
 ShellHub.</p>
 </div>
 <h2 id="connecting-to-your-device">Connecting to your device<a class="headerlink" href="#connecting-to-your-device" title="Permanent link">&para;</a></h2>
-<p>ShellHub supports different connection methods:</p>
+<p>ShellHub provides different connection methods:</p>
 <ul>
-<li>Web-based SSH client inside ShellHub UI (Chrome, Firefox)</li>
+<li>Web-based SSH client within the ShellHub UI (Chrome, Firefox)</li>
 <li>Traditional command line SSH client (Linux, Mac OS X)</li>
 <li>Any GUI SSH client like PuTTY (Windows)</li>
 </ul>
 <p>Open the ShellHub UI at <a href="">http://localhost</a> and sign in using the username and password
-that was generated in a previous step.</p>
-<p>Once you had sign in, go to Device Fleet page (<a href="" target="_blank">http://localhost/devices</a>)
-and follow instructions of one method:</p>
+generated previously.</p>
+<p>Once you are logged in, go to the <em>Device Fleet</em> page (<a href="" target="_blank">http://localhost/devices</a>)
+and follow instructions for a supported connection alternative:</p>
 <h3 id="web-based-ssh-client">Web-based SSH client<a class="headerlink" href="#web-based-ssh-client" title="Permanent link">&para;</a></h3>
-<p>In the Device Fleet page choose the device you want to connect to and click on Terminal icon
-located at <em>Actions</em> column of the table.</p>
-<p>A dialog will show prompting you for the username and password of any existing user in
-device's operating system. After providing credentials click on Connect button.</p>
+<p>In the <em>Device Fleet</em> page, choose the device you wish to connect to and click on <em>Terminal</em> icon
+located at the <em>Actions</em> column on the chart.</p>
+<p>A dialog will pop up prompting you for the username and password of an existing user on the
+device's operating system. After providing credentials, click on <em>Connect</em> button.</p>
 <h3 id="command-line-ssh-client">Command line SSH client<a class="headerlink" href="#command-line-ssh-client" title="Permanent link">&para;</a></h3>
-<p>To connect to your device using a command line SSH client you need to know its SSHID address.</p>
-<p>In the Device Fleet page choose the device you want to connect to and copy the device's SSHID
-address clicking on Copy icon located at SSHID address column of the table.</p>
-<p>Run the following command in your terminal:</p>
+<p>To connect to your device using a command line SSH client, you need to know its SSHID address.</p>
+<p>In the <em>Device Fleet</em> page, choose the device you want to connect to and copy the device's SSHID
+address clicking on <em>Copy</em> icon located on SSHID address column of the chart.</p>
+<p>Then, run the following command on your terminal:</p>
 <div class="codehilite"><pre><span></span>$ ssh &lt;USER&gt;@&lt;SSHID&gt;
 </pre></div>
 
 <div class="admonition note">
-<p>Make sure to replace <code>&lt;USER&gt;</code> with existing user in device's operating system and
-<code>&lt;SSHID&gt;</code> with the SSHID address copied before.</p>
+<p>Make sure to replace <code>&lt;USER&gt;</code> with the existing user on the device's operating system and
+<code>&lt;SSHID&gt;</code> with the aforementioned SSHID address.</p>
 </div>
 <h3 id="putty-gui-ssh-client">PuTTY GUI SSH client<a class="headerlink" href="#putty-gui-ssh-client" title="Permanent link">&para;</a></h3>
-<p>To connect to your device using a GUI SSH client you also need to its SSHID address.</p>
-<p>In the Device Fleet page choose the device you want to connect to and copy the device's SSHID
-address clicking on Copy icon located at SSHID address column of the table.</p>
-<p>Open Putty and fill it out with the following details:</p>
+<p>Connecting to your device using a GUI SSH client also requires its SSHID address.</p>
+<p>In the <em>Device Fleet</em> page, choose the device you want to connect to and copy the device's SSHID
+address by clicking on the <em>Copy</em> icon located at SSHID address column on the table.</p>
+<p>Open Putty and fill in with the following information:</p>
 <ul>
 <li>Host Name (or IP address): <code>&lt;USER&gt;</code>@<code>&lt;SSHID&gt;</code></li>
 <li>Port: 22</li>
 <li>Connection type: SSH</li>
 </ul>
 <div class="admonition note">
-<p>Make sure to replace <code>&lt;USER&gt;</code> with existing user in device's operating system and
-<code>&lt;SSHID&gt;</code> with the SSHID address copied before.</p>
+<p>Make sure to replace <code>&lt;USER&gt;</code> with the existing user on the device's operating system and
+<code>&lt;SSHID&gt;</code> with the aforementioned SSHID address.</p>
 </div>
                 
                   
@@ -560,6 +612,10 @@ address clicking on Copy icon located at SSHID address column of the table.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 O.S. Systems
+          </div>
+        
         powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
@@ -567,6 +623,17 @@ address clicking on Copy icon located at SSHID address column of the table.</p>
           Material for MkDocs</a>
       </div>
       
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/OSSystems" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/OSSystemsNews?s=20" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/ossystems" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
