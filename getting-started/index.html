@@ -480,20 +480,20 @@ and connects them together on a single machine.</p>
 <p class="admonition-title">Before continuing, make sure you have installed Docker Engine and Docker Compose</p>
 </div>
 <p>In a working directory, clone the ShellHub repository:</p>
-<div class="codehilite"><pre><span></span>$ git clone -b v0.0.1 https://github.com/shellhub-io/shellhub.git shellhub-v0.0.1
+<div class="codehilite"><pre><span></span>git clone -b v0.0.1 https://github.com/shellhub-io/shellhub.git shellhub-v0.0.1
 </pre></div>
 
-<div class="codehilite"><pre><span></span>$ cd shellhub-v0.0.1
+<div class="codehilite"><pre><span></span>cd shellhub-v0.0.1
 </pre></div>
 
 <h3 id="generate-keys">Generate keys<a class="headerlink" href="#generate-keys" title="Permanent link">&para;</a></h3>
 <p>It is required to generate a key pair (private and public) for your ShellHub server instance.</p>
-<div class="codehilite"><pre><span></span>$ ./bin/keygen
+<div class="codehilite"><pre><span></span>./bin/keygen
 </pre></div>
 
 <h3 id="starting">Starting<a class="headerlink" href="#starting" title="Permanent link">&para;</a></h3>
 <p>For bringing up the ShellHub server, run:</p>
-<div class="codehilite"><pre><span></span>$ docker-compose up -d
+<div class="codehilite"><pre><span></span>docker-compose up -d
 </pre></div>
 
 <div class="admonition warning">
@@ -501,7 +501,7 @@ and connects them together on a single machine.</p>
 </div>
 <h2 id="creating-the-initial-user">Creating the initial user<a class="headerlink" href="#creating-the-initial-user" title="Permanent link">&para;</a></h2>
 <p>As the ShellHub server is up and running, you need to create the first user.</p>
-<div class="codehilite"><pre><span></span>$ ./bin/add-user &lt;username&gt; &lt;password&gt;
+<div class="codehilite"><pre><span></span>./bin/add-user &lt;username&gt; &lt;password&gt;
 </pre></div>
 
 <div class="admonition info">
@@ -512,7 +512,7 @@ and connects them together on a single machine.</p>
 <p>The ShellHub Agent runs inside a Docker container. Make sure you have Docker
 installed and properly set up.</p>
 <p>Open a terminal on your device and then run the following commands to install the ShellHub agent:</p>
-<div class="codehilite"><pre><span></span>$ curl &quot;http://&lt;SERVER_IP&gt;/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
+<div class="codehilite"><pre><span></span>curl &quot;http://&lt;SERVER_IP&gt;/install.sh?tenant_id=&lt;TENANT_ID&gt;&quot; | sh
 </pre></div>
 
 <div class="admonition info">
@@ -541,7 +541,7 @@ device's operating system. After providing credentials, click on <em>Connect</em
 <p>In the <em>Device Fleet</em> page, choose the device you want to connect to and copy the device's SSHID
 address clicking on <em>Copy</em> icon located on SSHID address column of the chart.</p>
 <p>Then, run the following command on your terminal:</p>
-<div class="codehilite"><pre><span></span>$ ssh &lt;USER&gt;@&lt;SSHID&gt;
+<div class="codehilite"><pre><span></span>ssh &lt;USER&gt;@&lt;SSHID&gt;
 </pre></div>
 
 <div class="admonition note">
