@@ -479,18 +479,16 @@ and connects them together on a single machine.</p>
 <div class="admonition warning">
 <p class="admonition-title">Before continuing, make sure you have installed Docker Engine and Docker Compose</p>
 </div>
-<p>First off, download the docker-compose file:</p>
-<div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/docker-compose.yml
+<p>In a working directory, clone the ShellHub repository:</p>
+<div class="codehilite"><pre><span></span>$ git clone -b v0.0.1 https://github.com/shellhub-io/shellhub.git shellhub-v0.0.1
+</pre></div>
+
+<div class="codehilite"><pre><span></span>$ cd shellhub-v0.0.1
 </pre></div>
 
 <h3 id="generate-keys">Generate keys<a class="headerlink" href="#generate-keys" title="Permanent link">&para;</a></h3>
 <p>It is required to generate a key pair (private and public) for your ShellHub server instance.</p>
-<p>For such, you may download the <code>keygen</code> script:</p>
-<div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/bin/keygen
-</pre></div>
-
-<p>And generate key pairs running:</p>
-<div class="codehilite"><pre><span></span>$ sh ./keygen
+<div class="codehilite"><pre><span></span>$ ./bin/keygen
 </pre></div>
 
 <h3 id="starting">Starting<a class="headerlink" href="#starting" title="Permanent link">&para;</a></h3>
@@ -503,12 +501,7 @@ and connects them together on a single machine.</p>
 </div>
 <h2 id="creating-the-initial-user">Creating the initial user<a class="headerlink" href="#creating-the-initial-user" title="Permanent link">&para;</a></h2>
 <p>As the ShellHub server is up and running, you need to create the first user.</p>
-<p>On the current working directory, download the <code>add-user</code> utility from <a href="https://github.com/shellhub-io">our repository</a>:</p>
-<div class="codehilite"><pre><span></span>$ wget https://raw.githubusercontent.com/shellhub-io/shellhub/master/bin/add-user
-</pre></div>
-
-<p>Then run the <code>add-user</code> utility:</p>
-<div class="codehilite"><pre><span></span>$ sh ./add-user &lt;username&gt; &lt;password&gt;
+<div class="codehilite"><pre><span></span>$ ./bin/add-user &lt;username&gt; &lt;password&gt;
 </pre></div>
 
 <div class="admonition info">
