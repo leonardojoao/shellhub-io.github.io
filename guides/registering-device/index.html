@@ -13,6 +13,8 @@
         <meta name="description" content="ShellHub enables teams to easily access any Linux device behind firewall and NAT">
       
       
+        <link rel="canonical" href="https://github.com/shellhub-io/guides/registering-device/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -33,21 +35,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/shellhub-io/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.dev0, mkdocs-material-4.6.0">
     
     
       
-        <title>ShellHub</title>
+        <title>Registering a device - ShellHub</title>
       
     
     
-      <link rel="stylesheet" href="/shellhub-io/assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
       
     
     
-      <script src="/shellhub-io/assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -56,9 +58,9 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/shellhub-io/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-      <link rel="manifest" href="/shellhub-io/manifest.webmanifest">
+      <link rel="manifest" href="../../manifest.webmanifest">
     
     
     
@@ -80,6 +82,10 @@
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#one-line-installation-script-docker" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
     
     
       <header class="md-header" data-md-component="header">
@@ -103,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                
+                Registering a device
               
             </span>
           
@@ -189,7 +195,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/shellhub-io/." title="What is ShellHub?" class="md-nav__link">
+    <a href="../.." title="What is ShellHub?" class="md-nav__link">
       What is ShellHub?
     </a>
   </li>
@@ -201,7 +207,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/shellhub-io/introduction/" title="Overview" class="md-nav__link">
+    <a href="../../introduction/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -232,7 +238,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/shellhub-io/installing/" title="Installing" class="md-nav__link">
+    <a href="../../installing/" title="Installing" class="md-nav__link">
       Installing
     </a>
   </li>
@@ -247,10 +253,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Guides
@@ -268,7 +276,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/shellhub-io/guides/adding-account/" title="Adding account" class="md-nav__link">
+    <a href="../adding-account/" title="Adding account" class="md-nav__link">
       Adding account
     </a>
   </li>
@@ -278,11 +286,45 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/shellhub-io/guides/registering-device/" title="Registering a device" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Registering a device
+      </label>
+    
+    <a href="./" title="Registering a device" class="md-nav__link md-nav__link--active">
       Registering a device
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#one-line-installation-script-docker" class="md-nav__link">
+    One-line installation script (Docker)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -292,7 +334,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/shellhub-io/guides/connecting-device/" title="Connecting to a device" class="md-nav__link">
+    <a href="../connecting-device/" title="Connecting to a device" class="md-nav__link">
       Connecting to a device
     </a>
   </li>
@@ -310,12 +352,58 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#one-line-installation-script-docker" class="md-nav__link">
+    One-line installation script (Docker)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                  <a href="https://github.com/shellhub-io/shellhub-io.github.io/edit/src/docs/guides/registering-device.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Registering a device</h1>
+                
+                <p>In order to register a device on ShellHub, you need to install
+ShellHub agent onto it.</p>
+<p>The easiest way to install ShellHub agent is with our automatic one-line installation script, which works with all Linux distributions that have Docker installed and properly set up.</p>
+<p>The other way to install ShellHub agent is build it from the source code by yourself or if you are targeting embedded devices checkout our <a href="https://github.com/shellhub-io/meta-shellhub">Yocto Project support layer for ShellHub</a>.</p>
+<h2 id="one-line-installation-script-docker">One-line installation script (Docker)<a class="headerlink" href="#one-line-installation-script-docker" title="Permanent link">&para;</a></h2>
+<p>Open the ShellHub UI, navigate to <em>Devices</em> on the sidebar, and click on <em>ADD DEVICE</em>. It should give you a registration command that you can run on your device:</p>
+<p><img alt="Device Register" src="/img/register-device.png" /></p>
+<p>After your device is enrolled, it becomes available in <em>Devices</em> page.</p>
+                
+                  
+                
+                
+              
               
                 
 
@@ -328,6 +416,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../adding-account/" title="Adding account" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Adding account
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../connecting-device/" title="Connecting to a device" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Connecting to a device
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -345,7 +468,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="/shellhub-io/assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/OSSystems" class="md-footer-social__link fa fa-github"></a>
     
@@ -361,9 +484,9 @@
       
     </div>
     
-      <script src="/shellhub-io/assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
-      <script>app.initialize({version:"1.1.dev0",url:{base:"/shellhub-io"}})</script>
+      <script>app.initialize({version:"1.1.dev0",url:{base:"../.."}})</script>
       
     
   </body>

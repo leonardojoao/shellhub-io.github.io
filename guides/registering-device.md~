@@ -1,0 +1,17 @@
+## Adding your first device
+
+To add a device to ShellHub you need to install ShellHub Agent onto it.
+
+The ShellHub Agent runs inside a Docker container. Make sure you have Docker
+installed and properly set up.
+
+Open a terminal on your device and then run the following commands to install the ShellHub agent:
+
+```
+curl "http://<SERVER_IP>/install.sh?tenant_id=<TENANT_ID>" | sh
+```
+
+!!! info ""
+    Replace `<TENANT_ID>` with your _Tenant ID_ and
+    `<SERVER_IP>` with the public IP address of the host running
+    ShellHub.
